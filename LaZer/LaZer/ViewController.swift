@@ -23,7 +23,9 @@ class ViewController: UIViewController {
     var blueTeamScore = 0
     
     
+    @IBOutlet weak var gameWinner: UILabel!
     @IBOutlet weak var blueTeamLabel: UILabel!
+    
     
     func redTeamInfo() {
           Alamofire.request(.GET, "https://blooming-brook-68896.herokuapp.com/teams/1.json").responseJSON{(response) -> Void in
@@ -34,6 +36,7 @@ class ViewController: UIViewController {
                 print(redTeam["name"] as! String)
                 print(redTeam["score"] as! Int)
                 print(redTeam)
+
                 self.TagsFired.text = "Red Team Score: \(self.redTeamScore)"
                 
             }
@@ -51,9 +54,22 @@ class ViewController: UIViewController {
                 print(blueTeam["name"] as! String)
                 print(blueTeam["score"] as! Int)
                 print(blueTeam)
+
                 self.blueTeamLabel.text = "Blue Team Score: \(self.blueTeamScore)"
                 
+                
             }
+        }
+
+    }
+    
+    func winner()  {
+        if self.blueTeamScore > 20 {
+            self.gameWinner.text = "Blue Team Wins!"
+        } else if self.redTeamScore > 20 {
+            self.gameWinner.text = "Red Team Wins!"
+        } else {
+            self.gameWinner.text = " "
         }
 
     }
@@ -63,6 +79,7 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad(){
+       
         
    
         super.viewDidLoad()
@@ -101,8 +118,10 @@ class ViewController: UIViewController {
         
         let redTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("redTeamInfo"), userInfo: nil, repeats: true)
         let blueTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("blueTeamInfo"), userInfo: nil, repeats: true)
+        let winnerFinder = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("winner"), userInfo: nil, repeats: true)
         redTimer.tolerance = 0.2
         blueTimer.tolerance = 0.2
+        winnerFinder.tolerance = 0.2
 
 //     
 //        redTeamInfo()

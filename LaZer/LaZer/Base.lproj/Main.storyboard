@@ -44,6 +44,12 @@
                                         <color key="textColor" red="0.14328286051750183" green="0.1170269176363945" blue="0.97005981206893921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="94" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPn-2R-c6P">
+                                        <rect key="frame" x="100" y="12" width="250" height="94"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.47818726301193237" green="0.94835656881332397" blue="0.10957286506891251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -143,16 +149,17 @@
                         <outlet property="CameraView" destination="cIK-bi-7js" id="dgw-Nn-yY8"/>
                         <outlet property="TagsFired" destination="LAx-Z7-esd" id="zrT-OV-Cxc"/>
                         <outlet property="blueTeamLabel" destination="oRo-41-05A" id="Mbp-E3-NhS"/>
+                        <outlet property="gameWinner" destination="hPn-2R-c6P" id="ALi-0h-WVO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1030" y="351"/>
         </scene>
-        <!--View Controller-->
+        <!--MenuController-->
         <scene sceneID="gaf-Jg-4y5">
             <objects>
-                <viewController id="nRQ-aR-8C4" sceneMemberID="viewController">
+                <viewController title="MenuController" id="nRQ-aR-8C4" customClass="MenuController" customModule="LaZer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qVN-tk-YKW"/>
                         <viewControllerLayoutGuide type="bottom" id="nKO-m0-6Du"/>
@@ -178,13 +185,22 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="StartGame" id="5Gq-IT-QPV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUm-fd-cVE">
+                                <rect key="frame" x="1" y="518" width="84" height="30"/>
+                                <state key="normal" title="Reset Game"/>
+                                <connections>
+                                    <action selector="resetGame:" destination="nRQ-aR-8C4" eventType="touchUpInside" id="f1M-ob-sQG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Hea-MT-QB5" firstAttribute="centerY" secondItem="91r-ET-KPP" secondAttribute="centerY" id="aZg-aA-WGf"/>
                             <constraint firstItem="yue-Ue-mow" firstAttribute="centerX" secondItem="91r-ET-KPP" secondAttribute="centerX" id="bgZ-zf-sFb"/>
+                            <constraint firstItem="nKO-m0-6Du" firstAttribute="top" secondItem="AUm-fd-cVE" secondAttribute="bottom" constant="8" id="cuq-UG-FZK"/>
                             <constraint firstItem="yue-Ue-mow" firstAttribute="centerY" secondItem="91r-ET-KPP" secondAttribute="centerY" id="f8b-Xi-njY"/>
                             <constraint firstItem="Hea-MT-QB5" firstAttribute="centerX" secondItem="91r-ET-KPP" secondAttribute="centerX" id="rNv-jI-xTF"/>
+                            <constraint firstItem="AUm-fd-cVE" firstAttribute="leading" secondItem="91r-ET-KPP" secondAttribute="leadingMargin" id="wCe-9v-cWz"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
