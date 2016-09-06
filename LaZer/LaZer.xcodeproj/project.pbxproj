@@ -15,10 +15,8 @@
 		030A23991D7A25CE00E5A30F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030A23971D7A25CE00E5A30F /* LaunchScreen.storyboard */; };
 		030A23A41D7A25CE00E5A30F /* LaZerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A23A31D7A25CE00E5A30F /* LaZerTests.swift */; };
 		030A23AF1D7A25CE00E5A30F /* LaZerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A23AE1D7A25CE00E5A30F /* LaZerUITests.swift */; };
-		030A23BF1D7CD10600E5A30F /* LazerNoise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 030A23BE1D7CD10600E5A30F /* LazerNoise.mp3 */; };
-		030A23C11D7DB5B500E5A30F /* kranz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 030A23C01D7DB5B500E5A30F /* kranz.mp3 */; };
 		030A23C31D7DC4F600E5A30F /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A23C21D7DC4F600E5A30F /* MenuController.swift */; };
-		030A23C61D7E169000E5A30F /* theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 030A23C51D7E169000E5A30F /* theme.mp3 */; };
+		2C3B75DF33728FA04E5BC22E /* Pods_LaZer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC43B4CAFA0F23A69BB54A25 /* Pods_LaZer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +51,10 @@
 		030A23AA1D7A25CE00E5A30F /* LaZerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaZerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		030A23AE1D7A25CE00E5A30F /* LaZerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaZerUITests.swift; sourceTree = "<group>"; };
 		030A23B01D7A25CE00E5A30F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		030A23BE1D7CD10600E5A30F /* LazerNoise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = LazerNoise.mp3; path = ../../../../../../../Downloads/LazerNoise.mp3; sourceTree = "<group>"; };
-		030A23C01D7DB5B500E5A30F /* kranz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kranz.mp3; path = ../../../../../../../Downloads/kranz.mp3; sourceTree = "<group>"; };
 		030A23C21D7DC4F600E5A30F /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		030A23C51D7E169000E5A30F /* theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = theme.mp3; path = ../../../../../../../Downloads/theme.mp3; sourceTree = "<group>"; };
+		2D7353E08E2EE3496F206EE5 /* Pods-LaZer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaZer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaZer/Pods-LaZer.debug.xcconfig"; sourceTree = "<group>"; };
+		631501F43033FD2FDB926DD6 /* Pods-LaZer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaZer.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaZer/Pods-LaZer.release.xcconfig"; sourceTree = "<group>"; };
+		CC43B4CAFA0F23A69BB54A25 /* Pods_LaZer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaZer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3B75DF33728FA04E5BC22E /* Pods_LaZer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +90,8 @@
 				030A23A21D7A25CE00E5A30F /* LaZerTests */,
 				030A23AD1D7A25CE00E5A30F /* LaZerUITests */,
 				030A23891D7A25CE00E5A30F /* Products */,
+				90F83DED8060A4DB2A94CCAC /* Pods */,
+				31561840A1CA3769D47C593B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +111,6 @@
 				030A238B1D7A25CE00E5A30F /* AppDelegate.swift */,
 				030A238D1D7A25CE00E5A30F /* ViewController.swift */,
 				030A23C21D7DC4F600E5A30F /* MenuController.swift */,
-				030A23BE1D7CD10600E5A30F /* LazerNoise.mp3 */,
-				030A23C51D7E169000E5A30F /* theme.mp3 */,
-				030A23C01D7DB5B500E5A30F /* kranz.mp3 */,
 				030A238F1D7A25CE00E5A30F /* Main.storyboard */,
 				030A23951D7A25CE00E5A30F /* Assets.xcassets */,
 				030A23971D7A25CE00E5A30F /* LaunchScreen.storyboard */,
@@ -140,6 +138,23 @@
 			path = LaZerUITests;
 			sourceTree = "<group>";
 		};
+		31561840A1CA3769D47C593B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC43B4CAFA0F23A69BB54A25 /* Pods_LaZer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90F83DED8060A4DB2A94CCAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D7353E08E2EE3496F206EE5 /* Pods-LaZer.debug.xcconfig */,
+				631501F43033FD2FDB926DD6 /* Pods-LaZer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 030A23B31D7A25CE00E5A30F /* Build configuration list for PBXNativeTarget "LaZer" */;
 			buildPhases = (
+				9BFD89A6A6ECC8F389AE033C /* [CP] Check Pods Manifest.lock */,
 				030A23841D7A25CE00E5A30F /* Sources */,
 				030A23851D7A25CE00E5A30F /* Frameworks */,
 				030A23861D7A25CE00E5A30F /* Resources */,
+				535DECBB422FEBB754E29D8B /* [CP] Embed Pods Frameworks */,
+				7A3E414259A6BDE870B4A9AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,10 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030A23BF1D7CD10600E5A30F /* LazerNoise.mp3 in Resources */,
 				030A23991D7A25CE00E5A30F /* LaunchScreen.storyboard in Resources */,
-				030A23C61D7E169000E5A30F /* theme.mp3 in Resources */,
-				030A23C11D7DB5B500E5A30F /* kranz.mp3 in Resources */,
 				030A23961D7A25CE00E5A30F /* Assets.xcassets in Resources */,
 				030A23911D7A25CE00E5A30F /* Main.storyboard in Resources */,
 			);
@@ -269,6 +284,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		535DECBB422FEBB754E29D8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaZer/Pods-LaZer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A3E414259A6BDE870B4A9AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaZer/Pods-LaZer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BFD89A6A6ECC8F389AE033C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		030A23841D7A25CE00E5A30F /* Sources */ = {
@@ -420,6 +483,7 @@
 		};
 		030A23B41D7A25CE00E5A30F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D7353E08E2EE3496F206EE5 /* Pods-LaZer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -434,6 +498,7 @@
 		};
 		030A23B51D7A25CE00E5A30F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 631501F43033FD2FDB926DD6 /* Pods-LaZer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
