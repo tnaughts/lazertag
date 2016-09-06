@@ -55,12 +55,11 @@ class TeamsController < ApplicationController
   def tag
     @team_score = Team.find(params[:id])
     p @team_score
-    p "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     @team_score.score += 1
-    p "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    p "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
     p @team_score
     @team_score.save
-
+    redirect_to '/'
   end
 
   # DELETE /teams/1
