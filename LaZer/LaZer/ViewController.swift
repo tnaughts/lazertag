@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var blueTeamLabel: UILabel!
     
     func redTeamInfo() {
-          Alamofire.request(.GET, "http://localhost:3000/teams/1.json").responseJSON{(response) -> Void in
+          Alamofire.request(.GET, "https://blooming-brook-68896.herokuapp.com/teams/1.json").responseJSON{(response) -> Void in
             
             if let redTeam = response.result.value {
                 self.redTeamScore = (redTeam["score"] as! Int)
@@ -34,6 +34,7 @@ class ViewController: UIViewController {
                 print(redTeam["name"] as! String)
                 print(redTeam["score"] as! Int)
                 print(redTeam)
+                self.TagsFired.text = "Red Team Score: \(self.redTeamScore)"
                 
             }
         }
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
 
     func blueTeamInfo() {
         
-            Alamofire.request(.GET, "http://localhost:3000/teams/2.json").responseJSON{(response) -> Void in
+            Alamofire.request(.GET, "https://blooming-brook-68896.herokuapp.com/teams/2.json").responseJSON{(response) -> Void in
             
             if let blueTeam = response.result.value {
                 self.blueTeamScore = (blueTeam["score"] as! Int)
@@ -50,6 +51,7 @@ class ViewController: UIViewController {
                 print(blueTeam["name"] as! String)
                 print(blueTeam["score"] as! Int)
                 print(blueTeam)
+                self.blueTeamLabel.text = "Blue Team Score: \(self.blueTeamScore)"
                 
             }
         }
@@ -96,9 +98,15 @@ class ViewController: UIViewController {
 //            
 //            audioPlayer.play()
 //        }
+        
+        let redTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("redTeamInfo"), userInfo: nil, repeats: true)
+        let blueTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("blueTeamInfo"), userInfo: nil, repeats: true)
+        redTimer.tolerance = 0.2
+        blueTimer.tolerance = 0.2
+
 //     
-        redTeamInfo()
-        blueTeamInfo()
+//        redTeamInfo()
+//        blueTeamInfo()
 
         
         
@@ -146,11 +154,8 @@ class ViewController: UIViewController {
    
     @IBAction func TakePhoto(sender: UIButton) {
         tags = tags + 1
-        TagsFired.text = "Red Team Score: \(redTeamScore)"
-        blueTeamLabel.text = "Blue Team Score: \(blueTeamScore)"
-        redTeamInfo()
 //       playNstop()
-        Alamofire.request(.GET, "http://localhost:3000/teams/1/tag")
+        Alamofire.request(.GET, "https://blooming-brook-68896.herokuapp.com/teams/2/tag")
         if let videoConnection = sessionOutput.connectionWithMediaType(AVMediaTypeVideo){
             
             sessionOutput.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {
