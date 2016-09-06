@@ -226,7 +226,7 @@
 				TargetAttributes = {
 					030A23871D7A25CE00E5A30F = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = WE2UQ9MKQA;
+						DevelopmentTeam = 92U77LBT4Y;
 					};
 					030A239E1D7A25CE00E5A30F = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -490,7 +490,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LaZer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cs261.LaZer;
+				PRODUCT_BUNDLE_IDENTIFIER = LaZer2.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -505,7 +505,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LaZer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cs261.LaZer;
+				PRODUCT_BUNDLE_IDENTIFIER = LaZer2.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
