@@ -32,6 +32,18 @@
                                             <action selector="TakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hu2-aI-x81"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="199" placeholderIntrinsicHeight="21" text="Red Team Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAx-Z7-esd">
+                                        <rect key="frame" x="8" y="8" width="199" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.967509925365448" green="0.19383245706558228" blue="0.043360583484172821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Blue Team Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRo-41-05A">
+                                        <rect key="frame" x="251" y="4" width="191" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.14328286051750183" green="0.1170269176363945" blue="0.97005981206893921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -39,10 +51,14 @@
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="450" id="5Er-Vx-pa5"/>
+                                    <constraint firstItem="LAx-Z7-esd" firstAttribute="top" secondItem="cIK-bi-7js" secondAttribute="top" constant="8" id="EpB-XK-1T2"/>
                                     <constraint firstAttribute="height" constant="250" id="Lde-tZ-e2i"/>
                                     <constraint firstAttribute="height" constant="200" id="Z6j-6n-vby"/>
+                                    <constraint firstItem="oRo-41-05A" firstAttribute="top" secondItem="cIK-bi-7js" secondAttribute="top" constant="8" id="dIq-kG-iF2"/>
                                     <constraint firstAttribute="width" constant="390" id="hQX-uf-qWu"/>
+                                    <constraint firstItem="LAx-Z7-esd" firstAttribute="leading" secondItem="cIK-bi-7js" secondAttribute="leading" constant="8" id="hmG-EJ-Nrg"/>
                                     <constraint firstAttribute="width" secondItem="cIK-bi-7js" secondAttribute="height" multiplier="39:25" id="lPR-3T-FfP"/>
+                                    <constraint firstAttribute="trailing" secondItem="oRo-41-05A" secondAttribute="trailing" constant="8" id="oH4-M6-WAy"/>
                                     <constraint firstAttribute="width" constant="600" id="sk3-Pk-HE3"/>
                                     <constraint firstAttribute="height" constant="250" id="t2w-LK-O23"/>
                                     <constraint firstAttribute="width" secondItem="cIK-bi-7js" secondAttribute="height" multiplier="39:25" id="ycR-Tb-Ezt"/>
@@ -66,22 +82,10 @@
                                     <action selector="TakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zsr-5Q-nCH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Red Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAx-Z7-esd">
-                                <rect key="frame" x="255" y="290" width="84" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.967509925365448" green="0.19383245706558228" blue="0.043360583484172821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="LazerTAG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TL4-xr-zCl">
                                 <rect key="frame" x="95" y="28" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.63686501979827881" green="0.68119603395462036" blue="0.92584329843521118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Blue Team Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRo-41-05A">
-                                <rect key="frame" x="46" y="285" width="42" height="187"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.14328286051750183" green="0.1170269176363945" blue="0.97005981206893921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -98,21 +102,17 @@
                             <constraint firstItem="cIK-bi-7js" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QMZ-ds-9Y9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Sgp-K9-sgX" secondAttribute="trailing" id="S4C-gw-ZzW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cIK-bi-7js" secondAttribute="trailing" constant="7" id="WQC-0Z-OPR"/>
-                            <constraint firstItem="oRo-41-05A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xuo-et-bWa"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XxU-Ya-V3X"/>
                             <constraint firstItem="jeM-Zr-Gzq" firstAttribute="centerX" secondItem="cIK-bi-7js" secondAttribute="centerX" id="bL6-bB-U5d"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bdG-gy-TpT"/>
                             <constraint firstItem="Sgp-K9-sgX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ePZ-4g-72C"/>
-                            <constraint firstItem="LAx-Z7-esd" firstAttribute="top" secondItem="cIK-bi-7js" secondAttribute="top" id="fOJ-pc-zK0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TL4-xr-zCl" secondAttribute="trailing" constant="518" id="hje-8o-VaV"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="16:9" id="hp0-ed-SrC"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="iM9-a1-jg4"/>
-                            <constraint firstItem="LAx-Z7-esd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="lHB-gA-s8R"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="lcF-Jx-mNc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cIK-bi-7js" secondAttribute="bottom" constant="10" id="mpu-ds-y6u"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Sgp-K9-sgX" secondAttribute="trailing" constant="-12" id="neX-Uo-SWG"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="phQ-KG-smq"/>
-                            <constraint firstItem="oRo-41-05A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xOH-br-1eb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cIK-bi-7js" secondAttribute="trailing" constant="10" id="xdA-67-Nzl"/>
                         </constraints>
                         <variation key="default">
