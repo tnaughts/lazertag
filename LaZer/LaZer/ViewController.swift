@@ -22,10 +22,14 @@ class ViewController: UIViewController {
     var redTeamScore = 0
     var blueTeamScore = 0
     
+    @IBOutlet weak var homeButton: UIButton!
+ 
     
     @IBOutlet weak var gameWinner: UILabel!
     @IBOutlet weak var blueTeamLabel: UILabel!
     
+    @IBAction func homeButtons(sender: AnyObject) {
+    }
     
     func redTeamInfo() {
           Alamofire.request(.GET, "https://blooming-brook-68896.herokuapp.com/teams/1.json").responseJSON{(response) -> Void in
@@ -63,15 +67,16 @@ class ViewController: UIViewController {
 
     }
     
-    func winner()  {
-        if self.blueTeamScore > 20 {
+    func winner() {
+        if self.blueTeamScore > 19 {
             self.gameWinner.text = "Blue Team Wins!"
-        } else if self.redTeamScore > 20 {
+            //homeButton.hidden = false
+        } else if self.redTeamScore > 19 {
             self.gameWinner.text = "Red Team Wins!"
+            //homeButton.hidden = false
         } else {
             self.gameWinner.text = " "
         }
-
     }
     
     
@@ -81,8 +86,11 @@ class ViewController: UIViewController {
     override func viewDidLoad(){
        
         
+        
    
         super.viewDidLoad()
+        
+       homeButton.hidden = true
        // let path = NSBundle.mainBundle().pathForResource("LazerNoise", ofType: "mp3")
 // commenting out to save MP3s on project       let backgroundPath = NSBundle.mainBundle().pathForResource("kranz", ofType: "mp3")
 //        let soundURL = NSURL(fileURLWithPath: path!)
