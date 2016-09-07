@@ -9,56 +9,22 @@
 import Foundation
 import UIKit
 import AVFoundation
+import Alamofire
 
 class MenuController: UIViewController {
     
-    var captureSession = AVCaptureSession()
-    var sessionOutput = AVCaptureStillImageOutput()
-    var previewLayer = AVCaptureVideoPreviewLayer()
-    //    var kranz = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Din Daa Daa ; George Kranz", ofType: "mp3")!)
-    var audioPlayer = AVAudioPlayer()
-    var backgroundSound = AVAudioPlayer()
-    
+    @IBAction func resetGame(sender: UIButton) {
+        Alamofire.request(.GET, "https://blooming-brook-68896.herokuapp.com/teams/1/win")
+    }
     
     
     override func viewDidLoad(){
         
         
+
+        
         super.viewDidLoad()
-        let path = NSBundle.mainBundle().pathForResource("LazerNoise", ofType: "mp3")
-        let backgroundPath = NSBundle.mainBundle().pathForResource("kranz", ofType: "mp3")
-        let soundURL = NSURL(fileURLWithPath: path!)
-        let backgroundSoundURL = NSURL(fileURLWithPath: backgroundPath!)
-        
-        
-        do{
-            try audioPlayer = AVAudioPlayer(contentsOfURL: soundURL)
-            try backgroundSound = AVAudioPlayer(contentsOfURL: backgroundSoundURL)
-            audioPlayer.prepareToPlay()
-            backgroundSound.prepareToPlay()
-            backgroundSound.play()
-        }
-        catch let err as NSError
-        {
-            print(err.debugDescription)
-        }
-        
-        
-        
-        
-    }
-    func playNstop(){
-        
-        if audioPlayer.playing{
-            
-            
-            audioPlayer.play()
-        }else{
-            
-            audioPlayer.play()
-        }
-        
-    }
+            }
     
     
     
