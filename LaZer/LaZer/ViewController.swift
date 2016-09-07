@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     func redTeamInfo() {
-          Alamofire.request(.GET, "https://blooming-brook-68896.herokuapp.com/teams/1.json").responseJSON{(response) -> Void in
+          Alamofire.request(.GET, "https://blooming-brook-68896.herokuapp.com/teams/4.json").responseJSON{(response) -> Void in
             
             if let redTeam = response.result.value {
                 self.redTeamScore = (redTeam["score"] as! Int)
@@ -182,13 +182,28 @@ class ViewController: UIViewController {
     @IBAction func TakePhoto(sender: UIButton) {
         tags = tags + 1
 //       playNstop()
-        Alamofire.request(.GET, "https://blooming-brook-68896.herokuapp.com/teams/2/tag")
+        //Alamofire.request(.GET, "https://blooming-brook-68896.herokuapp.com/teams/2/tag")
         if let videoConnection = sessionOutput.connectionWithMediaType(AVMediaTypeVideo){
             
             sessionOutput.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {
                 buffer, error in
                 
                 let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer)
+            
+                let hit = OpenCVWrapper.codeFinder(UIImage(date: imageData))
+                if hit == true
+                {
+                    Alamofire.request(.GET, "https://blooming-brook-68896.herokuapp.com/teams/2/tag")
+                }
+                else if hit == false
+                {
+                    AlamoFire.request(.GET, "https://blooming-brook-68896.herokuapp.com/teams/4/tag")
+                }
+                else
+                {
+                    NSLog(" hit value is neither true nor false!?")
+                }
+                
                 UIImageWriteToSavedPhotosAlbum(UIImage(data: imageData)!, nil, nil, nil)
                 
                 })
