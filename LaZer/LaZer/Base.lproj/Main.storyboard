@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Sgp-K9-sgX">
-                                <rect key="frame" x="7" y="-42" width="585" height="685"/>
+                                <rect key="frame" x="8" y="-43" width="585" height="685"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIK-bi-7js">
                                 <rect key="frame" x="75" y="175" width="450" height="250"/>
@@ -94,18 +94,33 @@
                                 <color key="textColor" red="0.63686501979827881" green="0.68119603395462036" blue="0.92584329843521118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmf-ZH-8uz">
+                                <rect key="frame" x="20" y="513" width="86" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Portal Home">
+                                    <color key="titleColor" red="0.09676738828420639" green="0.65806955099105835" blue="0.77085840702056885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="homeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Fl-G7-40G"/>
+                                    <action selector="homeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z1W-Da-J5J"/>
+                                    <segue destination="nRQ-aR-8C4" kind="show" identifier="homeButton" id="r8i-Ss-DQU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Sgp-K9-sgX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="1Gf-dq-i3U"/>
+                            <constraint firstItem="Nmf-ZH-8uz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="24R-by-sUT"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3KH-uy-OlL"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9se-LI-3dk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nmf-ZH-8uz" secondAttribute="bottom" constant="8" id="ByD-Jy-T2f"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="G0C-Bb-tFw"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HGb-CO-ggU"/>
                             <constraint firstItem="jeM-Zr-Gzq" firstAttribute="centerY" secondItem="cIK-bi-7js" secondAttribute="centerY" id="Hsm-o9-dKU"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kgd-zA-xdI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cIK-bi-7js" secondAttribute="trailing" id="L0i-AN-nNX"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QMZ-ds-9Y9"/>
+                            <constraint firstItem="Nmf-ZH-8uz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="R0s-us-5ga"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Sgp-K9-sgX" secondAttribute="trailing" id="S4C-gw-ZzW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cIK-bi-7js" secondAttribute="trailing" constant="7" id="WQC-0Z-OPR"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XxU-Ya-V3X"/>
@@ -118,6 +133,7 @@
                             <constraint firstItem="cIK-bi-7js" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="lcF-Jx-mNc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cIK-bi-7js" secondAttribute="bottom" constant="10" id="mpu-ds-y6u"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Sgp-K9-sgX" secondAttribute="trailing" constant="-12" id="neX-Uo-SWG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nmf-ZH-8uz" secondAttribute="bottom" constant="8" id="oB7-gH-jLh"/>
                             <constraint firstItem="cIK-bi-7js" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="phQ-KG-smq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cIK-bi-7js" secondAttribute="trailing" constant="10" id="xdA-67-Nzl"/>
                         </constraints>
@@ -150,6 +166,7 @@
                         <outlet property="TagsFired" destination="LAx-Z7-esd" id="zrT-OV-Cxc"/>
                         <outlet property="blueTeamLabel" destination="oRo-41-05A" id="Mbp-E3-NhS"/>
                         <outlet property="gameWinner" destination="hPn-2R-c6P" id="ALi-0h-WVO"/>
+                        <outlet property="homeButton" destination="Nmf-ZH-8uz" id="135-Sy-U9z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
